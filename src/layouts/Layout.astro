@@ -8,8 +8,13 @@ interface Props {
 
 const { title } = Astro.props;
 
----
+// Use this preload tag to preload critical iamges. Place this in the <head> of the document. 
+// <link rel="preload" as="image" href="landing-m.webp')}}">
 
+// Use this preload tag to preload fonts. Place this in the <head> of the document. 
+// <link rel="preload" href="/fonts/roboto-v30-latin-regular.woff2 " as="font" type="font/woff2" crossorigin/>
+
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -17,6 +22,7 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preload" href="/src/fonts/inter-v18-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
